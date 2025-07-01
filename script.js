@@ -9,18 +9,23 @@ if (window.location.pathname.includes("love.html")) {
         heart.innerText = '❤️';
         heart.style.position = 'fixed';
         heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.top = '-30px';
-        heart.style.fontSize = (20 + Math.random() * 30) + 'px';
-        heart.style.zIndex = 9999;
+        heart.style.top = '-20px';
+        heart.style.fontSize = (20 + Math.random() * 20) + 'px';
+        heart.style.opacity = 1;
+        heart.style.transition = 'top 3s linear, opacity 3s';
         document.body.appendChild(heart);
 
-        let fall = setInterval(() => {
-            let top = parseFloat(heart.style.top);
-            heart.style.top = top + 2 + 'px';
-            if (top > window.innerHeight) {
-                heart.remove();
-                clearInterval(fall);
-            }
-        }, 20);
+        // trigger animation
+        setTimeout(() => {
+            heart.style.top = window.innerHeight + 'px';
+            heart.style.opacity = 0;
+        }, 100);
+
+        // remove after animation
+        setTimeout(() => {
+            heart.remove();
+        }, 3100);
+
     }, 300); // প্রতি 300ms এ নতুন ❤️
 }
+
