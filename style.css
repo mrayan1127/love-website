@@ -1,0 +1,33 @@
+body {
+    font-family: "Siyam Rupali", sans-serif;
+    background-color: #fff0f5;
+    color: #4b0082;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.quotes {
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+.love-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s;
+}
+
+.love-button:hover {
+    background-color: #ff1493;
+}
